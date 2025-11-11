@@ -1,10 +1,20 @@
 from salary import total_salary   # імпортуємо головну функцію з пакета salary
 from cats import get_cats_info    # імпортуємо головну функцію з пакета cats
 
+def parse_input(user_input):
+    cmd, *args = user_input.split()
+    cmd = cmd.strip().lower()
+    return cmd, *args
+
+def add_contact(args, contacts):
+    name, phone = args
+    contacts[name] = phone
+    return "Contact added."
+
 def main() -> None:
     #Точка входу.
-    #Викликає total_salary() і виводить результат.
     
+    #Викликає total_salary() і виводить результат.
     total, average = total_salary("path/to/salary_file.txt")
     print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
 
@@ -12,7 +22,10 @@ def main() -> None:
     cats_info = get_cats_info("path/to/cats_file.txt")
     print(cats_info)
 
-
 # Перевіряємо, що скрипт запущено напряму, а не імпортовано
 if __name__ == "__main__":
     main()
+
+    # Консольний бот. Запуститься після виводу total_salary() та get_cats_info().
+    # Якщо треба запускати бота окремо — assistant.py.
+    assistant_main()

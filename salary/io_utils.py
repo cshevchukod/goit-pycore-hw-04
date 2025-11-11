@@ -5,13 +5,17 @@ def read_lines(path: str) -> list[str]:
     lines = []
 
     try:
-        # Спробуємо відкрити файл:
+        # Відкриваємо файл у режимі читання
         with open(path, 'r', encoding='utf-8') as file:
             for line in file:
                 lines.append(line.strip())
     except FileNotFoundError:
         # Якщо файл не існує:
         print("Файл не знайдено.")
+        return []
+    except Exception as e:
+        # Будь-яка інша непередбачена помилка
+        print(f"Помилка: {e}")
         return []
 
     return lines

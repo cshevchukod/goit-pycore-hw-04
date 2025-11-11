@@ -1,5 +1,6 @@
 from salary import total_salary   # імпортуємо головну функцію з пакета salary
 from cats import get_cats_info    # імпортуємо головну функцію з пакета cats
+from assistant import assistant_main  # імпорт точки входу бота
 
 def parse_input(user_input):
     cmd, *args = user_input.split()

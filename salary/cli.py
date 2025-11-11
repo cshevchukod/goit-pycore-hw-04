@@ -1,5 +1,5 @@
 # Імпортуємо допоміжні функції з інших модулів пакета
-from .io_utils import read_lines
+from common.io_utils import read_lines
 from .parse import parse_salaries
 from .stats import sum_and_avg
 

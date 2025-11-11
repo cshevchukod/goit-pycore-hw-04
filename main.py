@@ -1,4 +1,5 @@
 from salary import total_salary   # імпортуємо головну функцію з пакета salary
+from cats import get_cats_info    # імпортуємо головну функцію з пакета cats
 
 def main() -> None:
     #Точка входу.
@@ -6,6 +7,9 @@ def main() -> None:
     
     total, average = total_salary("path/to/salary_file.txt")
     print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
+
+    cats_info = get_cats_info("path/to/cats_file.txt")
+    print(cats_info)
 
 
 # Перевіряємо, що скрипт запущено напряму, а не імпортовано

@@ -33,11 +33,7 @@ def parse_cats(lines: list[str]) -> list[dict]:
             continue
 
         # Додаємо словник у список котів
-        cats.append({
-            "id": cid,
-            "name": name,
-            "age": age
-        })
+        cats.append({"id": cid, "name": name, "age": age})
 
     # Повертаємо готовий список усіх валідних записів
     return cats

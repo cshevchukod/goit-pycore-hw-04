@@ -8,6 +8,7 @@ def main() -> None:
     total, average = total_salary("path/to/salary_file.txt")
     print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
 
+    #Викликає get_cats_info() і виводить результат.
     cats_info = get_cats_info("path/to/cats_file.txt")
     print(cats_info)
 
